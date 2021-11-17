@@ -3,8 +3,10 @@ import { useState } from 'react';
 import './App.css';
 
 import {VATContext} from './Context/VATcontext'
+import {StatusContext} from './Context/StatusContext'
 
 import Home from './Component/App/Home'
+import Status from './Component/App/LegalStatus';
 
 function App() {
 
@@ -12,6 +14,9 @@ function App() {
   const [ isAnnual, setIsAnnual ] = useState(false)
   const [ isMonthly, setIsMonthly ] = useState(false)
   const [ isTrimester, setIsTrimester ] = useState(false)
+  const [ isIndividual, setIsIndividual ] = useState(false)
+  const [ isSARL, setIsSARL ] = useState(false)
+  const [ isSAS, setIsSAS ] = useState(false)
 
   return (
     <div id="container">
@@ -27,10 +32,10 @@ function App() {
           setIsMonthly,
           setIsTrimester
           }}>
-          <Routes>
-            <Route path='/' element={<Home />} />
-
-          </Routes>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/forme_juridique' element={<Status />} />
+            </Routes>
         </VATContext.Provider>
         </BrowserRouter>
       </div>
