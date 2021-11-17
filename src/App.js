@@ -45,7 +45,6 @@ function App() {
           <StatusContext.Provider value={StatusValue}>
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/forme_juridique' element={<Status />} />
             </Routes>
           </StatusContext.Provider>
         </VATContext.Provider>

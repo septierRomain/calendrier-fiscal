@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import VATContext from '../../Context/VATcontext';
 import Banner from './Banner';
 import Status from './LegalStatus';
+import Questionnary from './Questionnary';
 import VAT from './VAT';
 
 function Home() {
@@ -18,8 +19,8 @@ function Home() {
         
         <p>C’est parti !</p>
       </div>
-      
-      {noVAT||isAnnual||isMonthly||isTrimester ? <Status /> :<VAT /> }
+
+      <Questionnary />
 
     </div>
   )
