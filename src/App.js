@@ -17,25 +17,37 @@ function App() {
   const [ isIndividual, setIsIndividual ] = useState(false)
   const [ isSARL, setIsSARL ] = useState(false)
   const [ isSAS, setIsSAS ] = useState(false)
+  
+  const VATValue = {
+    noVAT,
+    isAnnual,
+    isMonthly,
+    isTrimester,
+    setNoVAT,
+    setIsAnnual,
+    setIsMonthly,
+    setIsTrimester
+  }
+  const StatusValue = {
+    isIndividual,
+    isSARL,
+    isSAS,
+    setIsIndividual,
+    setIsSARL,
+    setIsSAS
+  }
 
   return (
     <div id="container">
       <div className="App">
         <BrowserRouter>
-        <VATContext.Provider value={{ 
-          noVAT,
-          isAnnual,
-          isMonthly,
-          isTrimester,
-          setNoVAT,
-          setIsAnnual,
-          setIsMonthly,
-          setIsTrimester
-          }}>
+        <VATContext.Provider value={VATValue}>
+          <StatusContext.Provider value={StatusValue}>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/forme_juridique' element={<Status />} />
             </Routes>
+          </StatusContext.Provider>
         </VATContext.Provider>
         </BrowserRouter>
       </div>

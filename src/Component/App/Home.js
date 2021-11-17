@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import VATContext from '../../Context/VATcontext';
 import Banner from './Banner';
+import Status from './LegalStatus';
 import VAT from './VAT';
 
 function Home() {
+
+  const {noVAT, isAnnual, isMonthly, isTrimester} = useContext(VATContext)
 
   return(
     <div id="welcome" className='wrap'>
@@ -15,7 +19,8 @@ function Home() {
         <p>C’est parti !</p>
       </div>
       
-      <VAT />
+      {noVAT||isAnnual||isMonthly||isTrimester ? <Status /> :<VAT /> }
+
     </div>
   )
 }
