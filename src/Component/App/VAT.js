@@ -1,26 +1,50 @@
-import React from 'react';
-
-import {useContext} from 'react';
+import React, { useContext } from 'react';
 
 import VATContext from '../../Context/VATcontext';
 
-function VAT() {
-  
-  const {
-    setNoVAT,
-    setIsAnnual,
-    setIsMonthly,
-    setIsTrimester
-  } = useContext(VATContext)
+function VAT(props) {
+
+  const {VAT, setVAT} = useContext(VATContext)
+
+  const toggleVAT = (e) => {
+    const id = e.target.name
+      setVAT({[id]: true})
+    console.log(id)
+  }
 
   return (
     <div>
     <h2>Quel est votre régime de TVA ?</h2>
     <div className="select_container">
-      <button onClick={()=>setNoVAT(true)} className='select'>Franchise de base</button>
-      <button onClick={()=>setIsMonthly(true)} className='select'>Mensuel</button>
-      <button onClick={()=>setIsTrimester(true)} className='select'>Trimestriel</button>
-      <button onClick={()=>setIsAnnual(true)} className='select'>Simplfiée</button>
+
+        <button
+          onClick={(e)=>toggleVAT(e)}
+          name='noVAT'
+          className={VAT.noVAT ? 'select focus' : 'select'}
+        >
+          Franchise de base
+        </button>
+        <button
+          name='isMonthly'
+          onClick={(e)=>toggleVAT(e)}
+          className={VAT.isMonthly ? 'select focus' : 'select'}
+        >
+          Mensuel
+        </button>
+        <button
+          name='isTrimester'
+          onClick={(e)=>toggleVAT(e)}
+          className={VAT.isTrimester ? 'select focus' : 'select'}
+        >
+            Trimestriel
+        </button>
+        <button
+          name='isAnnual'
+          onClick={(e)=>toggleVAT(e)}
+          className={VAT.isAnnual ? 'select focus' : 'select'}
+        >
+          Simplfiée
+        </button>
     </div>
   </div>
   )

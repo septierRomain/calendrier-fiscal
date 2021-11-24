@@ -1,20 +1,35 @@
-import React from 'react';
-import { useContext } from 'react';
-import VATContext from '../../Context/VATcontext';
-import StatusContext from '../../Context/StatusContext';
+import React, { useContext} from 'react';
+import TaxSystem from './TaxSystem';
 import Status from './LegalStatus';
 import VAT from './VAT';
-import TaxSystem from './TaxSystem';
+import { Link } from 'react-router-dom';
+import TaxContext from '../../Context/TaxContext';
+import VATContext from '../../Context/VATcontext';
+import StatusContext from '../../Context/StatusContext';
 
 function Questionnary() {
 
-  const {noVAT, isAnnual, isMonthly, isTrimester} = useContext(VATContext)
-  const {isIndividual, isSARL, isSAS} = useContext(StatusContext)
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
+  const {TAX} = useContext(TaxContext)
+  // const {VAT} = useContext(VATContext)
+  // const {Status} = useContext(StatusContext)
 
   return (
     <div>
-      {noVAT||isAnnual||isMonthly||isTrimester ? 
-      <Status /> : <VAT />}
+      <form onSubmit={handleSubmit}>
+        <VAT/>
+        <Status/>
+        <TaxSystem/>
+      </form>
+        <div id='send'>
+            <Link to='/calendrier' id='undo'>Valider</Link>
+        </div>
+        <div>
+          {TAX ? '' : <p>choisi</p>}
+        </div>
     </div>
   )
 }

@@ -1,13 +1,8 @@
-import React, {useContext} from 'react';
-import VATContext from '../../Context/VATcontext';
+import React from 'react';
 import Banner from './Banner';
-import Status from './LegalStatus';
 import Questionnary from './Questionnary';
-import VAT from './VAT';
 
 function Home() {
-
-  const {noVAT, isAnnual, isMonthly, isTrimester} = useContext(VATContext)
 
   return(
     <div id="welcome" className='wrap'>

@@ -4,38 +4,33 @@ import './App.css';
 
 import {VATContext} from './Context/VATcontext'
 import {StatusContext} from './Context/StatusContext'
+import {TaxContext} from './Context/TaxContext'
 
 import Home from './Component/App/Home'
-import Status from './Component/App/LegalStatus';
+import Results from './Component/Results/index';
 
 function App() {
 
-  const [ noVAT, setNoVAT ] = useState(false)
-  const [ isAnnual, setIsAnnual ] = useState(false)
-  const [ isMonthly, setIsMonthly ] = useState(false)
-  const [ isTrimester, setIsTrimester ] = useState(false)
-  const [ isIndividual, setIsIndividual ] = useState(false)
-  const [ isSARL, setIsSARL ] = useState(false)
-  const [ isSAS, setIsSAS ] = useState(false)
+  const [ VAT, setVAT ] = useState({
+    noVAT: false,
+    isTrimester: false,
+    isAnnual: false,
+    isMonthly: false
+  })
+  const [Status, setStatus] = useState({
+    isSARL: false,
+    isSAS: false,
+    isIndividual: false
+  })
+
+  const [ TAX, setTAX ] = useState({
+    isIR: false,
+    isIS: false
+  })
   
-  const VATValue = {
-    noVAT,
-    isAnnual,
-    isMonthly,
-    isTrimester,
-    setNoVAT,
-    setIsAnnual,
-    setIsMonthly,
-    setIsTrimester
-  }
-  const StatusValue = {
-    isIndividual,
-    isSARL,
-    isSAS,
-    setIsIndividual,
-    setIsSARL,
-    setIsSAS
-  }
+  const VATValue = {VAT,setVAT}
+  const StatusValue = {Status, setStatus}
+  const TaxValue = {TAX, setTAX}
 
   return (
     <div id="container">
@@ -43,9 +38,12 @@ function App() {
         <BrowserRouter>
         <VATContext.Provider value={VATValue}>
           <StatusContext.Provider value={StatusValue}>
-            <Routes>
-              <Route path='/' element={<Home />} />
-            </Routes>
+            <TaxContext.Provider value={TaxValue} >
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/calendrier' element={<Results />} />
+              </Routes>
+            </TaxContext.Provider>
           </StatusContext.Provider>
         </VATContext.Provider>
         </BrowserRouter>

@@ -7,7 +7,7 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-ul, p, li {
+ul, p, li, a {
   font-family: 'Open Sans'!important;
   text-align: left;
 }
@@ -58,7 +58,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.select:hover {
+.select:hover, .focus {
   color: #11ABEC;
   border: 1px solid #11ABEC;
 }
@@ -136,6 +136,11 @@ body {
   height: 50px;
   font-size: 14px;
   line-height: 19px;
+}
+#send{
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
 }
 #undo>img {
   margin-right: 8px;
