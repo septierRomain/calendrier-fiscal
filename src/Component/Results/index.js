@@ -3,18 +3,20 @@ import { useNavigate } from 'react-router-dom';
 import StatusContext from '../../Context/StatusContext';
 import TaxContext from '../../Context/TaxContext';
 import VATContext from '../../Context/VATcontext';
+
 import Banner from '../App/Banner';
-import GreyArrow from '../../Assets/grey arrow.svg'
-import Check from '../../Assets/check.svg'
+import Breadcrumbs from './breadcrumbs';
+
+import GreyArrow from '../../Assets/grey arrow.svg';
 
 
 function Results() {
-
+  
   let history = useNavigate()
 
-  const {Status} = useContext(StatusContext)
-  const {VAT} = useContext(VATContext)
-  const {TAX} = useContext(TaxContext)
+  const {Status, setStatus} = useContext(StatusContext)
+  const {VAT, setVAT} = useContext(VATContext)
+  const {TAX, setTAX} = useContext(TaxContext)
   
   const ShowVAT = () => {
     if(VAT.isAnnual) {
@@ -46,6 +48,9 @@ function Results() {
 
   const back = () => {
     history(-1)
+    setVAT({})
+    setStatus({})
+    setTAX({})
   }
 
   return (
@@ -56,29 +61,11 @@ function Results() {
         <img src={GreyArrow} alt="fleche grise"/>
           Retour
         </button>
-        <div className='breadcrumbs'>
-          <p>Vous etes :</p>
-          {
-            Status.isSAS ? <p><img src={Check} alt="fleche grise"/>une SAS</p> : 
-            Status.isSARL ? <p><img src={Check} alt="fleche grise"/>une SARL/EURL</p> :
-            Status.isIndividual ? <p><img src={Check} alt="fleche grise"/>une entreprise individuelle ou une auto-entreprise</p>:
-            ''
-          }
-          {
-            VAT.isAnnual ? <p><img src={Check} alt="fleche grise"/>au régime de tva simplifié</p> :
-            VAT.isMonthly ? <p><img src={Check} alt="fleche grise"/>au régime mensuel</p> :
-            VAT.isTrimester ? <p><img src={Check} alt="fleche grise"/>au régime trimestrielle</p> :
-            ''
-          }
-          {
-            TAX.isIStrue ? <p><img src={Check} alt="fleche grise"/>à l'impot sur les revenus</p> :
-            <p><img src={Check} alt="fleche grise"/>à l'impot sur les sociétés</p>
-          }
-        </div>
-        <h2>votre calendrier fiscal</h2>
+        <Breadcrumbs />
+        <h2>Votre calendrier fiscal</h2>
         <div>
-          <ShowVAT />
-          <ShowTAX />
+          {/* <ShowVAT /> */}
+          {/* <ShowTAX /> */}
         </div>
       </div>
     </div>
