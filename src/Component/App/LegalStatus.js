@@ -25,7 +25,7 @@ function LegalStatus(props) {
         onClick={(e)=>toggleStatus(e)}
         className={Status.isIndividual ? 'select focus' : 'select'}
         >
-          Auto-Entreprise / Entreprise individuelle
+          Auto-Entreprise <br /> Entreprise&nbsp;individuelle
         </button>
       <button
         name='isSARL'

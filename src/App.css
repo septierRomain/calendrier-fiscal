@@ -260,13 +260,14 @@ ul>img, .return>img {
     justify-content: center;
     align-items: center;
     padding: 16px;
+    margin: auto;
   }
   #welcome, #App, .wrap {
     width: 780px;
   }
   .select_container {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
   }
   #assujetti {
     padding-top: 1.5em;
