@@ -6,13 +6,13 @@ import TaxContext from '../../Context/TaxContext';
 import VATContext from '../../Context/VATcontext';
 
 import Banner from '../App/Banner';
-// import Breadcrumbs from './Breadcrumbs';
 import ShowVAT from './ShowVAT'
 
 import GreyArrow from '../../Assets/grey arrow.svg';
 import ShowTAX from './ShowTAX';
 import CFE from './CFE';
 import OSS from './OSS';
+import Breadcrumbs from './Breadcrumbs';
 
 
 function Results() {
@@ -40,7 +40,7 @@ function Results() {
         <img src={GreyArrow} alt="fleche grise"/>
           Retour
         </button>
-        {/* <Breadcrumbs /> */}
+        <Breadcrumbs />
         <h2>Votre calendrier fiscal</h2>
         <div>
           <ShowVAT />
