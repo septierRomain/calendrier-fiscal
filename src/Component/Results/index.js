@@ -11,6 +11,8 @@ import ShowVAT from './ShowVAT'
 
 import GreyArrow from '../../Assets/grey arrow.svg';
 import ShowTAX from './ShowTAX';
+import CFE from './CFE';
+import OSS from './OSS';
 
 
 function Results() {
@@ -43,6 +45,8 @@ function Results() {
         <div>
           <ShowVAT />
           <ShowTAX />
+          <CFE />
+          <OSS />
         </div>
       </div>
     </div>
