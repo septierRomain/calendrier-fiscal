@@ -170,6 +170,15 @@ img {
   font-size: 12px;
   margin-left: 2.7em;
 }
+.outlined {
+  background: white;
+  color: #11ABEC;
+  padding: 0 1em;
+  margin: 0 1em;
+  border: solid 1px #11ABEC;
+  border-radius: 10%;
+  height: 2.5em;
+}
 
 
 /* MEDIA QUERIES */

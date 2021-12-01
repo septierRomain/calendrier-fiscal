@@ -10,10 +10,10 @@ function OSS() {
   return(
     <div>
       <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Guichet unique :</ul>
-      <div style={{display: 'flex'}}>
-        <p>Etes vous redevable de :</p>
-        <button onClick={()=>setOSS(!oss)}>OSS</button>
-        <button onClick={()=>setIOSS(!ioss)}>IOSS</button>
+      <div style={{display: 'flex', alignItems: 'center'}}>
+        <p>Vous etes inscrit au guichet :</p>
+        <button className='outlined' onClick={()=>setOSS(!oss)}>OSS</button>
+        <button className='outlined' onClick={()=>setIOSS(!ioss)}>IOSS</button>
       </div>
       <div>
         {oss ?
