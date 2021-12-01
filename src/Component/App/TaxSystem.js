@@ -3,12 +3,12 @@ import React from 'react';
 import { useContext } from 'react';
 import TaxContext from '../../Context/TaxContext'
 
-function TaxSystem() {
+function TaxSystem(props) {
 
   const toggleTAX = (e) => {
     const id = e.target.name
-      setTAX({[id]: true})
-    console.log(id)
+    setTAX({[id]: true})
+    props.changeAnswer(true)
   }
 
   const {TAX,setTAX} = useContext(TaxContext)

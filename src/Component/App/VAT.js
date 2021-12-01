@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 
 import VATContext from '../../Context/VATcontext';
 
-function VAT(props) {
+function Vat(props) {
 
   const {VAT, setVAT} = useContext(VATContext)
 
   const toggleVAT = (e) => {
     const id = e.target.name
-      setVAT({[id]: true})
-    console.log(id)
+    setVAT({[id]: true})
+    props.changeAnswer(true)
   }
 
   return (
@@ -49,4 +49,4 @@ function VAT(props) {
   </div>
   )
 }
-export default VAT
+export default Vat

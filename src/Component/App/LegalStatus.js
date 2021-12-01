@@ -4,14 +4,14 @@ import {useContext} from 'react';
 
 import StatusContext from '../../Context/StatusContext';
 
-function Status() {
+function LegalStatus(props) {
   
   const {Status, setStatus} = useContext(StatusContext)
 
   const toggleStatus = (e) => {
     const id = e.target.name
-      setStatus({[id]: true})
-    console.log(id)
+    setStatus({[id]: true})
+    props.changeAnswer(true)
   }
 
   return (
@@ -48,4 +48,4 @@ function Status() {
   </div>
   )
 }
-export default Status
+export default LegalStatus

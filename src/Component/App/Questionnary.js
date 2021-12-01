@@ -1,34 +1,34 @@
-import React, { useContext} from 'react';
+import React, {useState} from 'react';
 import TaxSystem from './TaxSystem';
-import Status from './LegalStatus';
-import VAT from './VAT';
+import LegalStatus from './LegalStatus';
+import Vat from './VAT';
 import { Link } from 'react-router-dom';
-import TaxContext from '../../Context/TaxContext';
-import VATContext from '../../Context/VATcontext';
-import StatusContext from '../../Context/StatusContext';
 
 function Questionnary() {
+
+  const [vatAnswer, setVatAnswer] = useState(false)
+  const [statusAnswer, setStatusAnswer] = useState(false)
+  const [taxAnswer, setTaxAnswer] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
   }
 
-  const {TAX} = useContext(TaxContext)
-  // const {VAT} = useContext(VATContext)
-  // const {Status} = useContext(StatusContext)
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <VAT/>
-        <Status/>
-        <TaxSystem/>
+        <Vat changeAnswer={setVatAnswer} />
+        <LegalStatus changeAnswer={setStatusAnswer}/>
+        <TaxSystem changeAnswer={setTaxAnswer}/>
       </form>
         <div id='send'>
-            <Link to='/calendrier' id='undo'>Valider</Link>
+          {taxAnswer&&vatAnswer&&statusAnswer ?
+          <Link to='/calendrier' id='undo'>Valider</Link> : 
+          ''
+          }
+          
         </div>
         <div>
-          {TAX ? '' : <p>choisi</p>}
         </div>
     </div>
   )
