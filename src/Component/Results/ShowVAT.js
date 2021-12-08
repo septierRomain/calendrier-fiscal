@@ -33,8 +33,8 @@ function ShowVAT() {
   const {VAT} = useContext(VATContext)
 
   return(
-    <div>
-      <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Vos date de tva :</ul>
+    <div className='aqua'>
+      <ul ><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Vos date de tva :</ul>
       <ShowVAT />
     </div>
   )
