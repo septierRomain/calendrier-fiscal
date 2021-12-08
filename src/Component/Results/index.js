@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import StatusContext from '../../Context/StatusContext';
 import TaxContext from '../../Context/TaxContext';
 import VATContext from '../../Context/VATcontext';
+import DateContext from '../../Context/DateContext';
 
 import Banner from '../App/Banner';
 import ShowVAT from './ShowVAT'
@@ -12,7 +13,7 @@ import GreyArrow from '../../Assets/grey arrow.svg';
 import ShowTAX from './ShowTAX';
 import CFE from './CFE';
 import OSS from './OSS';
-import Breadcrumbs from './breadcrumbs.js';
+import Breadcrumbs from './breadCrumbs.js';
 
 
 function Results() {
@@ -22,6 +23,7 @@ function Results() {
   const {setStatus} = useContext(StatusContext)
   const {setVAT} = useContext(VATContext)
   const {setTAX} = useContext(TaxContext)
+  const {setDate} = useContext(DateContext)
 
   const back = () => {
     history(-1)
@@ -29,6 +31,7 @@ function Results() {
       setVAT({})
       setStatus({})
       setTAX({})
+      setDate({})
     }, 50)
   }
 

@@ -3,6 +3,7 @@ import React, {useContext} from 'react';
 import StatusContext from '../../Context/StatusContext';
 import TaxContext from '../../Context/TaxContext';
 import VATContext from '../../Context/VATcontext';
+import DateContext from '../../Context/DateContext';
 
 import Check from '../../Assets/check.svg'
 
@@ -10,6 +11,7 @@ function Breadcrumbs() {
   const {Status} = useContext(StatusContext)
   const {VAT} = useContext(VATContext)
   const {TAX} = useContext(TaxContext)
+  const {date} = useContext(DateContext)
   
   return (
     <div className='breadcrumbs'>
@@ -30,6 +32,12 @@ function Breadcrumbs() {
           {
             TAX.isIStrue ? <p><img src={Check} alt="fleche grise"/>à l'impot sur les revenus</p> :
             <p><img src={Check} alt="fleche grise"/>à l'impot sur les sociétés</p>
+          }
+          {
+            date.is3103 ? <p><img src={Check} alt="fleche grise"/>vous cloturez au 31 mars</p> :
+            date.is3006 ? <p><img src={Check} alt="fleche grise"/>vous cloturez au 30 Juin</p> :
+            date.is3009 ? <p><img src={Check} alt="fleche grise"/>vous cloturez au 30 Septembre</p> :
+            date.is3112 ? <p><img src={Check} alt="fleche grise"/>vous cloturez au 31 Décembre</p> : ''
           }
         </div>
   )
