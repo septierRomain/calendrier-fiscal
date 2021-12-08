@@ -5,6 +5,7 @@ import './App.css';
 import {VATContext} from './Context/VATcontext'
 import {StatusContext} from './Context/StatusContext'
 import {TaxContext} from './Context/TaxContext'
+import {DateContext} from './Context/DateContext'
 
 import Home from './Component/App/Home'
 import Results from './Component/Results/index';
@@ -27,10 +28,17 @@ function App() {
     isIR: false,
     isIS: false
   })
+  const [ date, setDate ] = useState({
+    is3103: false,
+    is3006: false,
+    is3009: false,
+    is3112: false
+  })
   
   const VATValue = {VAT,setVAT}
   const StatusValue = {Status, setStatus}
   const TaxValue = {TAX, setTAX}
+  const DateValue = {date, setDate}
 
   return (
     <div id="container">
@@ -39,10 +47,12 @@ function App() {
         <VATContext.Provider value={VATValue}>
           <StatusContext.Provider value={StatusValue}>
             <TaxContext.Provider value={TaxValue} >
-              <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/calendrier' element={<Results />} />
-              </Routes>
+              <DateContext.Provider value={DateValue} >
+                <Routes>
+                  <Route path='/' element={<Home />} />
+                  <Route path='/calendrier' element={<Results />} />
+                </Routes>
+              </DateContext.Provider>
             </TaxContext.Provider>
           </StatusContext.Provider>
         </VATContext.Provider>
