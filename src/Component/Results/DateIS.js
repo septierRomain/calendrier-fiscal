@@ -7,7 +7,7 @@ function IS() {
   const {date} = useContext(DateContext)
 
   return(
-    <div>
+    <div className="section-content">
       <p>Acompte au 15 Juillet et au 15 Décembre</p>
       {
       date.is3103 ? <p>Solde d'impot société au 15 Juillet</p> :

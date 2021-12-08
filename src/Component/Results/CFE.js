@@ -1,12 +1,14 @@
 import React from 'react';
 
-import Arrow from '../../Assets/arrow.svg'
-
 function CFE() {
   return(
-    <div>
-      <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Votre CFE :</ul>
-      <p>La cotisation fonciere des entreprise (CFE) est à payer pour le 15 Décembre</p>      
+    <div className='section'>
+      <div className="section-title">
+        <h5>CFE</h5>
+      </div>
+      <div className="section-content">
+        <p>La cotisation fonciere des entreprise (CFE) est à payer pour le 15 Décembre</p>
+      </div>
     </div>
   )
 }

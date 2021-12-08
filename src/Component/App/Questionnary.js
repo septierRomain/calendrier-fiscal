@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
+
 import TaxSystem from './TaxSystem';
 import LegalStatus from './LegalStatus';
 import EndingDate from './EndingDate';
 import Vat from './VAT';
-import { Link } from 'react-router-dom';
 
 function Questionnary() {
 
@@ -17,7 +18,7 @@ function Questionnary() {
   }
 
   return (
-    <div>
+    <div className='questionnary'>
       <form onSubmit={handleSubmit}>
         <Vat changeAnswer={setVatAnswer} />
         <LegalStatus changeAnswer={setStatusAnswer}/>

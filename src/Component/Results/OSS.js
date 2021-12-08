@@ -8,25 +8,39 @@ function OSS() {
   const [ioss, setIOSS] = useState(false)
 
   return(
-    <div>
-      <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Guichet unique :</ul>
-      <div style={{display: 'flex', alignItems: 'center'}}>
+    <div className='section'>
+      <div className="section-title">
+        <h5>Guichet unique</h5>
+      </div>
+      <div className='section-content' style={{display: 'flex', alignItems: 'center'}}>
         <p>Vous etes inscrit au guichet :</p>
         <button className='outlined' onClick={()=>setOSS(!oss)}>OSS</button>
         <button className='outlined' onClick={()=>setIOSS(!ioss)}>IOSS</button>
       </div>
-      <div>
+      <div className='section-content'>
         {oss ?
-          <div>
-            <ul>OSS</ul>
-            <p>31/03 - 30/06 - 30/09 - 31/12</p>
-          </div> 
+        <div className='section-content-sub'>
+          <ul>
+            <img
+              src={Arrow}
+              alt="Fleche verte"
+              style={{transform: 'rotate(180deg)'}}
+            />
+          OSS</ul>
+          <p>Chaque trimestre (31 mars, 30 Juin, 30 Septembre et 31 Décembre)</p>
+        </div> 
         :''
         }
         {ioss ?
-        <div>
-          <ul>IOSS</ul>
-          <p>le dernier jour de chaque mois</p>
+        <div className='section-content-sub'>
+          <ul>
+            <img
+              src={Arrow}
+              alt="Fleche verte"
+              style={{transform: 'rotate(180deg)'}}
+            />
+          IOSS</ul>
+          <p>Le dernier jour de chaque mois</p>
         </div>
         : ''
         }

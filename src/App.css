@@ -141,6 +141,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 1em;
+  padding: 1em 0;
 }
 #undo>img {
   margin-right: 8px;
@@ -178,6 +179,28 @@ img {
   border: solid 1px #11ABEC;
   border-radius: 10%;
   height: 2.5em;
+}
+.section {
+  border: 1px solid #dce4ed;
+  margin: 1em auto auto;
+}
+.section-title {
+  padding: 10px 0 10px 16px;
+  max-width: 100%;
+  background-color: #F1F7FC;
+  color: #11ABEC;
+}
+.section-title>h5 {
+  margin: 0!important;
+}
+.section-content {
+  padding-left: 16px;
+}
+.section-content-sub {
+  padding-left: 32px;
+}
+.questionnary {
+  padding: 1em 0;
 }
 
 

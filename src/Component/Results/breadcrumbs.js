@@ -15,11 +15,10 @@ function Breadcrumbs() {
   
   return (
     <div className='breadcrumbs'>
-          <p>Vous etes :</p>
           {
-            Status.isSAS ? <p><img src={Check} alt="fleche grise"/>une SAS</p> : 
-            Status.isSARL ? <p><img src={Check} alt="fleche grise"/>une SARL/EURL</p> :
-            Status.isIndividual ? <p><img src={Check} alt="fleche grise"/>une entreprise individuelle ou une auto-entreprise</p>:
+            Status.isSAS ? <p><img src={Check} alt="fleche grise"/>Vous etes une SAS</p> : 
+            Status.isSARL ? <p><img src={Check} alt="fleche grise"/>Vous etes une SARL/EURL</p> :
+            Status.isIndividual ? <p><img src={Check} alt="fleche grise"/>Vous etes une entreprise individuelle ou une auto-entreprise</p>:
             ''
           }
           {
@@ -34,10 +33,10 @@ function Breadcrumbs() {
             <p><img src={Check} alt="fleche grise"/>à l'impot sur les sociétés</p>
           }
           {
-            date.is3103 ? <p><img src={Check} alt="fleche grise"/>vous cloturez au 31 mars</p> :
-            date.is3006 ? <p><img src={Check} alt="fleche grise"/>vous cloturez au 30 Juin</p> :
-            date.is3009 ? <p><img src={Check} alt="fleche grise"/>vous cloturez au 30 Septembre</p> :
-            date.is3112 ? <p><img src={Check} alt="fleche grise"/>vous cloturez au 31 Décembre</p> : ''
+            date.is3103 ? <p><img src={Check} alt="fleche grise"/>Vous cloturez au 31 mars</p> :
+            date.is3006 ? <p><img src={Check} alt="fleche grise"/>Vous cloturez au 30 Juin</p> :
+            date.is3009 ? <p><img src={Check} alt="fleche grise"/>Vous cloturez au 30 Septembre</p> :
+            date.is3112 ? <p><img src={Check} alt="fleche grise"/>Vous cloturez au 31 Décembre</p> : ''
           }
         </div>
   )

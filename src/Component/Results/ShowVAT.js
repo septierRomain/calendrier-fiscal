@@ -3,13 +3,20 @@ import React, {useContext} from 'react';
 import StatusContext from '../../Context/StatusContext';
 import VATContext from '../../Context/VATcontext';
 
-import Arrow from '../../Assets/arrow.svg'
+import DateContext from '../../Context/DateContext';
 
 function ShowVAT() {
 
   const ShowVAT = () => {
     if(VAT.isAnnual) {
-      return(<p>TVA le 5 Mai N+1</p>)
+      if(date.is3103)
+        {return(<p>TVA à payer au 30 Juin</p>)}
+      else if(date.is3006)
+        {return(<p>TVA à payer au 30 Septembre</p>)}
+      else if(date.is3009)
+        {return(<p>TVA à payer au 31 Décembre</p>)}
+      else if(date.is3112)
+        {return(<p>TVA à payer au 30 Avril</p>)}
     } else if(VAT.isTrimester){
       if(Status.isSAS)
         {return(<p>TVA le 24 Avril/Juillet/Octobre/Janvier</p>)}
@@ -31,11 +38,18 @@ function ShowVAT() {
 
   const {Status} = useContext(StatusContext)
   const {VAT} = useContext(VATContext)
+  const {date} = useContext(DateContext)
 
   return(
-    <div className='aqua'>
-      <ul ><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Vos date de tva :</ul>
-      <ShowVAT />
+    <div className='section'>
+      <section>
+        <div className='section-title'>
+          <h5>TVA</h5>
+        </div>
+        <div className='section-content' >
+          <ShowVAT />
+        </div>
+      </section>
     </div>
   )
 }
