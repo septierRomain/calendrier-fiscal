@@ -23,7 +23,7 @@ function LegalStatus(props) {
         name='isIndividual'
         type='button'
         onClick={(e)=>toggleStatus(e)}
-        className={Status.isIndividual ? 'select focus' : 'select'}
+        className={Status.isIndividual ? 'select focus' : 'select shadow'}
         >
           Auto-Entreprise <br /> Entreprise&nbsp;individuelle
         </button>
@@ -31,7 +31,7 @@ function LegalStatus(props) {
         name='isSARL'
         type='button'
         onClick={(e)=>toggleStatus(e)}
-        className={Status.isSARL ? 'select focus' : 'select'}
+        className={Status.isSARL ? 'select focus' : 'select shadow'}
       >
         EURL / SARL
       </button>
@@ -39,7 +39,7 @@ function LegalStatus(props) {
         name='isSAS'
         type='button'
         onClick={(e)=>toggleStatus(e)}
-        className={Status.isSAS ? 'select focus' : 'select'}
+        className={Status.isSAS ? 'select focus' : 'select shadow'}
       >
         SAS / SASU
       </button>

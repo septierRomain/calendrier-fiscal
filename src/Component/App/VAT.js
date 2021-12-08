@@ -20,28 +20,28 @@ function Vat(props) {
         <button
           onClick={(e)=>toggleVAT(e)}
           name='noVAT'
-          className={VAT.noVAT ? 'select focus' : 'select'}
+          className={VAT.noVAT ? 'select focus' : 'select shadow'}
         >
           Franchise de base
         </button>
         <button
           name='isMonthly'
           onClick={(e)=>toggleVAT(e)}
-          className={VAT.isMonthly ? 'select focus' : 'select'}
+          className={VAT.isMonthly ? 'select focus' : 'select shadow'}
         >
           Mensuel
         </button>
         <button
           name='isTrimester'
           onClick={(e)=>toggleVAT(e)}
-          className={VAT.isTrimester ? 'select focus' : 'select'}
+          className={VAT.isTrimester ? 'select focus' : 'select shadow'}
         >
             Trimestriel
         </button>
         <button
           name='isAnnual'
           onClick={(e)=>toggleVAT(e)}
-          className={VAT.isAnnual ? 'select focus' : 'select'}
+          className={VAT.isAnnual ? 'select focus' : 'select shadow'}
         >
           Simplfiée
         </button>

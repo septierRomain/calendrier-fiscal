@@ -33,28 +33,28 @@ function EndingDate(props) {
             <button
               onClick={(e)=>toggleDate(e)}
               name='is3103'
-              className={date.is3103 ? 'select focus' : 'select'}
+              className={date.is3103 ? 'select focus' : 'select shadow'}
             >
               31 mars
             </button>
             <button
               onClick={(e)=>toggleDate(e)}
               name='is3006'
-              className={date.is3006 ? 'select focus' : 'select'}
+              className={date.is3006 ? 'select focus' : 'select shadow'}
             >
               30 Juin
             </button>
             <button
               onClick={(e)=>toggleDate(e)}
               name='is3009'
-              className={date.is3009 ? 'select focus' : 'select'}
+              className={date.is3009 ? 'select focus' : 'select shadow'}
             >
               30 Septembre
             </button>
             <button
               onClick={(e)=>toggleDate(e)}
               name='is3112'
-              className={date.is3112 ? 'select focus' : 'select'}
+              className={date.is3112 ? 'select focus' : 'select shadow'}
             >
               31 Décembre
             </button>

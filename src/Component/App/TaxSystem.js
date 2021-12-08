@@ -25,7 +25,7 @@ function TaxSystem(props) {
             name='isIR'
             value='Impot sur le revenu'
             onClick={(e)=>toggleTAX(e)} 
-            className={TAX.isIR ? 'select focus' : 'select'} 
+            className={TAX.isIR ? 'select focus' : 'select shadow'} 
             />
           </div>
         :
@@ -35,14 +35,14 @@ function TaxSystem(props) {
             name='isIR'
             value='Impot sur le revenu'
             onClick={(e)=>toggleTAX(e)} 
-            className={TAX.isIR ? 'select focus' : 'select'} 
+            className={TAX.isIR ? 'select focus' : 'select shadow'} 
           />
           <input
             type='button'
             name='isIS'
             value='Impot sur les sociétés'
             onClick={(e)=>toggleTAX(e)}
-            className={TAX.isIS ? 'select focus' : 'select'}
+            className={TAX.isIS ? 'select focus' : 'select shadow'}
           />
         </div>
         }

@@ -45,7 +45,7 @@ function Results() {
         </button>
         <Breadcrumbs />
         <h2>Votre calendrier fiscal</h2>
-        <div>
+        <div className='wrap-result'>
           <ShowVAT />
           <ShowTAX />
           <CFE />

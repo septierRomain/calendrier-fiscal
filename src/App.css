@@ -58,9 +58,13 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.select:hover, .focus {
+.select:hover {
   color: #11ABEC;
   border: 1px solid #11ABEC;
+}
+.focus {
+  color: #11ABEC;
+  border: 0px solid #11ABEC;
 }
 .button {
   display: flex;
@@ -202,7 +206,23 @@ img {
 .questionnary {
   padding: 1em 0;
 }
-
+.shadow {
+  /* box-shadow: 0 0 6px rgb(0,0,0, 0.5); */
+  box-shadow: 0 0 6px rgb(17,171,236, 0.5);
+}
+.shadow:hover {
+  box-shadow: 0 0 6px #F1F7FC;
+}
+.focus {
+  /* box-shadow: 0 0 6px rgb(17,171,236, 0.5); */
+  border: solid 1px #11ABEC!important;
+}
+.wrap-result {
+  margin-bottom: 2em;
+}
+.section {
+  background-color: white;
+}
 
 /* MEDIA QUERIES */
 
@@ -283,7 +303,7 @@ ul>img, .return>img {
     justify-content: center;
     align-items: center;
     padding: 16px;
-    margin: auto;
+    margin-right: 16px;
   }
   #welcome, #App, .wrap {
     width: 780px;
