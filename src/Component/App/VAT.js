@@ -21,6 +21,7 @@ function Vat(props) {
           onClick={(e)=>toggleVAT(e)}
           name='noVAT'
           className={VAT.noVAT ? 'select focus' : 'select shadow'}
+          style={{marginRight: '16px'}}
         >
           Franchise de base
         </button>
@@ -28,6 +29,7 @@ function Vat(props) {
           name='isMonthly'
           onClick={(e)=>toggleVAT(e)}
           className={VAT.isMonthly ? 'select focus' : 'select shadow'}
+          style={{marginRight: '16px'}}
         >
           Mensuel
         </button>
@@ -35,6 +37,7 @@ function Vat(props) {
           name='isTrimester'
           onClick={(e)=>toggleVAT(e)}
           className={VAT.isTrimester ? 'select focus' : 'select shadow'}
+          style={{marginRight: '16px'}}
         >
             Trimestriel
         </button>
@@ -42,6 +45,7 @@ function Vat(props) {
           name='isAnnual'
           onClick={(e)=>toggleVAT(e)}
           className={VAT.isAnnual ? 'select focus' : 'select shadow'}
+          style={{margin: '0'}}
         >
           Simplfiée
         </button>

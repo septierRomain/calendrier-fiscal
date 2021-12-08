@@ -34,6 +34,7 @@ function EndingDate(props) {
               onClick={(e)=>toggleDate(e)}
               name='is3103'
               className={date.is3103 ? 'select focus' : 'select shadow'}
+              style={{marginRight: '16px'}}
             >
               31 mars
             </button>
@@ -41,6 +42,7 @@ function EndingDate(props) {
               onClick={(e)=>toggleDate(e)}
               name='is3006'
               className={date.is3006 ? 'select focus' : 'select shadow'}
+              style={{marginRight: '16px'}}
             >
               30 Juin
             </button>
@@ -48,6 +50,7 @@ function EndingDate(props) {
               onClick={(e)=>toggleDate(e)}
               name='is3009'
               className={date.is3009 ? 'select focus' : 'select shadow'}
+              style={{marginRight: '16px'}}
             >
               30 Septembre
             </button>
@@ -55,6 +58,7 @@ function EndingDate(props) {
               onClick={(e)=>toggleDate(e)}
               name='is3112'
               className={date.is3112 ? 'select focus' : 'select shadow'}
+              style={{marginRight: '0'}}
             >
               31 Décembre
             </button>
