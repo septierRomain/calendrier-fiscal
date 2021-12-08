@@ -13,7 +13,7 @@ import GreyArrow from '../../Assets/grey arrow.svg';
 import ShowTAX from './ShowTAX';
 import CFE from './CFE';
 import OSS from './OSS';
-import Breadcrumbs from './breadcrumbs.js';
+import Breadcrumbs from './breadcrumbs'
 
 
 function Results() {
