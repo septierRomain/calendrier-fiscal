@@ -33,7 +33,6 @@ function EndingDate(props) {
     setValue(value)
     setDate({[value.value]: true})
     props.changeAnswer(true)
-    // console.log(date)
   }
 
   return(
