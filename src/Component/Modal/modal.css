@@ -38,6 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .modal-close-button {
@@ -46,8 +47,8 @@
   cursor: pointer;
   border: none;
   background: transparent;
-  border: solid 1px #2ecc40;
-  border-radius: 10%;
+  border: solid 2px #2ecc40;
+  border-radius: 6%;
   padding: 1em 1.5em;
   display: flex;
   align-items: center;
@@ -56,6 +57,10 @@
 .modal-close-button>img{
   padding-right: 10px;
 }
+.svg-inline--fa{
+  padding-right: 1em;
+}
+
 .modal-close{
   display: flex;
   justify-content: flex-end;
@@ -68,4 +73,8 @@ button.modal-toggle {
   padding: 1rem 2rem;
   text-transform: uppercase;
   border: none;
+}
+.fa-lightbulb {
+  padding: 0 0 32px 0;
+  font-size: 4em;
 }

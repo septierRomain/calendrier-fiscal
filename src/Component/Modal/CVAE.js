@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCheckCircle, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import './modal.css'
 
 const ModalCVAE = ({ isShowing, hide }) =>
@@ -12,6 +12,7 @@ const ModalCVAE = ({ isShowing, hide }) =>
             <div className="modal-wrapper">
               <div className="modal">
                 <div className="modal-header">
+                  <FontAwesomeIcon icon={faLightbulb} />
                   <h4>CVAE</h4>
                 </div>
                 <div className="modal-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam excepturi eligendi asperiores beatae sequi ad, libero architecto, alias perspiciatis dolorum hic fugit blanditiis quas sunt repudiandae debitis maiores ex! Odit?</div>
