@@ -11,7 +11,7 @@ ul, p, li, a {
   font-family: 'Open Sans'!important;
   text-align: left;
 }
-h1, h2, h5, h4,h3, .select {
+h1, h2, h5, h4,h3, .select, #react-select-3-placeholder, #react-select-3-listbox, .css-qc6sy-singleValue {
   font-family: 'eina03'!important;
 }
 h5 {
@@ -206,7 +206,7 @@ img {
 .questionnary {
   padding: 1em 0;
 }
-.shadow {
+.shadow, #endingDate {
   /* box-shadow: 0 0 6px rgb(0,0,0, 0.5); */
   box-shadow: 0 0 6px rgb(17,171,236, 0.5);
 }
@@ -222,6 +222,9 @@ img {
 }
 .section {
   background-color: white;
+}
+#react-select-3-placeholder, .css-tj5bde-Svg{
+  color: #001A25;
 }
 
 /* MEDIA QUERIES */

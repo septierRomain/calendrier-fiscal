@@ -4,15 +4,15 @@ import DateContext from '../../Context/DateContext'
 
 function EndingDate(props) {
 
-  const {date, setDate} = useContext(DateContext)
+  const {setDate} = useContext(DateContext)
 
   const [value, setValue] = useState('')
   
-  const toggleDate = (e) => {
-    const id = e.target.name
-    setDate({[id]: true})
-    props.changeAnswer(true)
-  }
+  // const toggleDate = (e) => {
+  //   const id = e.target.name
+  //   setDate({[id]: true})
+  //   props.changeAnswer(true)
+  // }
 
   const options = [
     {label: '31 Janvier', value:'is3101'},
