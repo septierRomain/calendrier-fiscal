@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import StatusContext from '../../Context/StatusContext';
@@ -14,6 +14,10 @@ import ShowTAX from './ShowTAX';
 import CFE from './CFE';
 import OSS from './OSS';
 import Breadcrumbs from './breadcrumbs'
+import CVAE from './CVAE'
+import TV from './Tv'
+import TVS from './TVS'
+import TS from './TS';
 
 
 function Results() {
@@ -24,6 +28,8 @@ function Results() {
   const {setVAT} = useContext(VATContext)
   const {setTAX} = useContext(TaxContext)
   const {setDate} = useContext(DateContext)
+
+  const [more, setMore] = useState(false)
 
   const back = () => {
     history(-1)
@@ -50,6 +56,19 @@ function Results() {
           <ShowTAX />
           <CFE />
           <OSS />
+          <div id='more'>
+            <button onClick={()=>setMore(!more)} className={more ? 'hide' : 'undo'}>Plus</button>
+            {
+            more ?
+            <div className="wrap-result">
+              <CVAE />
+              <TV />
+              <TVS />
+              <TS />
+            </div>
+            : ''
+            }
+          </div>
         </div>
       </div>
     </div>

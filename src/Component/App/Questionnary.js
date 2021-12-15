@@ -27,7 +27,7 @@ function Questionnary() {
       </form>
         <div id='send'>
           {taxAnswer&&vatAnswer&&statusAnswer&&dateAnswer ?
-          <Link to='/calendrier' id='undo'>Valider</Link> : 
+          <Link to='/calendrier' className='undo'>Valider</Link> : 
           ''
           }
         </div>

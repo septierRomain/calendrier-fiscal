@@ -11,7 +11,7 @@ ul, p, li, a {
   font-family: 'Open Sans'!important;
   text-align: left;
 }
-h1, h2, h5, h4,h3, .select, #react-select-3-placeholder, #react-select-3-listbox, .css-qc6sy-singleValue {
+h1, h2, h5, h4,h3, .select, #react-select-9-placeholder, #react-select-9-listbox, .css-qc6sy-singleValue {
   font-family: 'eina03'!important;
 }
 h5 {
@@ -128,7 +128,7 @@ body {
   line-height: 120%;
   cursor: pointer;
 }
-#undo {
+.undo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +141,7 @@ body {
   font-size: 14px;
   line-height: 19px;
 }
-#send{
+#send, #more{
   display: flex;
   justify-content: center;
   margin-top: 1em;
@@ -225,6 +225,9 @@ img {
 }
 #react-select-3-placeholder, .css-tj5bde-Svg{
   color: #001A25;
+}
+.hide {
+  display: none;
 }
 
 /* MEDIA QUERIES */
