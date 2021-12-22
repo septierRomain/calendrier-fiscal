@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 1040;
-  background-color: rgba(0,0,0,.85);
+  background-color: rgba(0,0,0,.90);
 }
 
 .modal-wrapper {
@@ -42,7 +42,7 @@
 }
 
 .modal-close-button {
-  font-size: 14px;
+  font-size: 16px;
   color: #2ecc40;
   cursor: pointer;
   border: none;
@@ -53,6 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 600;
 }
 .modal-close-button>img{
   padding-right: 10px;
@@ -64,17 +65,23 @@
 .modal-close{
   display: flex;
   justify-content: flex-end;
-  padding: 2em;
+  padding-top: 2em;
 }
 button.modal-toggle {
   background-color: #F1F7FC;
   color: #11ABEC;
   cursor: pointer;
-  padding: 1rem 2rem;
+  padding-left: 2em;
   text-transform: uppercase;
   border: none;
 }
 .fa-lightbulb {
   padding: 0 0 32px 0;
   font-size: 4em;
+}
+.modal-body>a{
+  color: white;
+}
+.modal-body>a:hover{
+  text-decoration: underline;
 }

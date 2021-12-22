@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import './modal.css'
 
-const ModalCVAE = ({ isShowing, hide }) =>
+const ModalOSS = ({ isShowing, hide }) =>
   isShowing
     ? ReactDOM.createPortal(
         <>
@@ -13,13 +13,13 @@ const ModalCVAE = ({ isShowing, hide }) =>
               <div className="modal">
                 <div className="modal-header">
                   <FontAwesomeIcon icon={faLightbulb} />
-                  <h4>CVAE</h4>
+                  <h4>Guichet unique TVA</h4>
                 </div>
                 <div className="modal-body">
-                <p>
+                  <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam excepturi eligendi asperiores beatae sequi ad, libero architecto, alias perspiciatis dolorum hic fugit blanditiis quas sunt repudiandae debitis maiores ex! Odit?
                   </p>
-                  <a href="https://www.service-public.fr/professionnels-entreprises/vosdroits/F23546" target='_blank' rel="noreferrer" >Plus d'informations ici !</a>
+                  <a href="https://www.impots.gouv.fr/portail/professionnel/jutilise-le-guichet-unique-tva-ioss-oss" target='_blank' rel="noreferrer">Plus d'information ici !</a>
                 </div>
                 <div className="modal-close">
                   <button
@@ -39,4 +39,4 @@ const ModalCVAE = ({ isShowing, hide }) =>
       )
     : null;
 
-export default ModalCVAE;
+export default ModalOSS;

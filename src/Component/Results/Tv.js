@@ -1,14 +1,21 @@
 import React, { useContext } from 'react';
 import VATContext from '../../Context/VATcontext';
+import useModal from '../Hooks/useModal';
+import ModalTV from '../Modal/ModalTV'
 
 function TV() {
 
   const {VAT} = useContext(VATContext)
+  const { isShowing, toggle } = useModal();
 
   return(
     <div className='section'>
       <div className="section-title">
-        <h5>Redevance télé</h5>
+        <h5>
+          Redevance télé
+          <button className="modal-toggle" onClick={toggle} >+ d'info</button>
+        </h5>
+        <ModalTV isShowing={isShowing} hide={toggle} />
       </div>
       <div className="section-content">
         {
