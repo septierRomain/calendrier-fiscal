@@ -10,7 +10,8 @@ function Home() {
 
       <div id="welcome_banner">
         <h1>Bonjour et bienvenue sur notre calendrier fiscal</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat fuga sed minima sequi repudiandae quos, ipsa commodi alias aperiam necessitatibus est molestias quisquam, ratione, beatae cumque explicabo officiis fugit!</p>
+        <p>Découvrez toutes les dates clés de l'année en matiére d'impôt: TVA, impôt société, impôt sur le revenu, CFE, OSS, IOSS, taxe sur les véhicules des sociétés...</p>
+        <p>Vous ne raterez plus aucune échéance et les visualiserez en un coup d'oeil.</p>
         
         <p>C’est parti !</p>
       </div>
