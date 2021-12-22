@@ -7,7 +7,7 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-ul, p, li, a {
+ul, p, li, a, ol {
   font-family: 'Open Sans'!important;
   text-align: left;
 }

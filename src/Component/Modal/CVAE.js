@@ -16,10 +16,11 @@ const ModalCVAE = ({ isShowing, hide }) =>
                   <h4>CVAE</h4>
                 </div>
                 <div className="modal-body">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam excepturi eligendi asperiores beatae sequi ad, libero architecto, alias perspiciatis dolorum hic fugit blanditiis quas sunt repudiandae debitis maiores ex! Odit?
+                  <p>
+                    La CVAE est due par l'entreprise (personne physique ou morale) qui réalise plus de 500 000 € de chiffre d'affaires hors taxe
                   </p>
-                  <a href="https://www.service-public.fr/professionnels-entreprises/vosdroits/F23546" target='_blank' rel="noreferrer" >Plus d'informations ici !</a>
+                  <hr />
+                  <a className="modal-link" href="https://www.service-public.fr/professionnels-entreprises/vosdroits/F23546" target='_blank' rel="noreferrer" >Plus d'informations ici !</a>
                 </div>
                 <div className="modal-close">
                   <button

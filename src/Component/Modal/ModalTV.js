@@ -17,9 +17,13 @@ const ModalTV = ({ isShowing, hide }) =>
                 </div>
                 <div className="modal-body">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam excepturi eligendi asperiores beatae sequi ad, libero architecto, alias perspiciatis dolorum hic fugit blanditiis quas sunt repudiandae debitis maiores ex! Odit?
+                    Toute entreprise, société ou entrepreneur individuel, qui exerce une activité artisanale, commerciale ou libérale et qui possède un poste de télévision dans un ou plusieurs établissements doit payer cette contribution.
                   </p>
-                  <a href="https://www.service-public.fr/professionnels-entreprises/vosdroits/F24670" target='_blank' rel="noreferrer" >Plus d'informations ici !</a>
+                  <p>
+                    La contribution est due que le téléviseur ait été acheté, donné, prêté ou provienne d'une succession.
+                  </p>
+                  <hr />
+                  <a className="modal-link" href="https://www.service-public.fr/professionnels-entreprises/vosdroits/F24670" target='_blank' rel="noreferrer" >Plus d'informations ici !</a>
                 </div>
                 <div className="modal-close">
                   <button

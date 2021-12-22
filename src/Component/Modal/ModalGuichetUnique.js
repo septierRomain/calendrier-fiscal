@@ -17,9 +17,12 @@ const ModalOSS = ({ isShowing, hide }) =>
                 </div>
                 <div className="modal-body">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam excepturi eligendi asperiores beatae sequi ad, libero architecto, alias perspiciatis dolorum hic fugit blanditiis quas sunt repudiandae debitis maiores ex! Odit?
+                    Depuis 1er juillet 2021, de nouvelles règles de localisation des ventes à distance de biens, en provenance d’un autre État membre de l’Union européenne (UE) ou en provenance de pays tiers, et à destination de non assujettis à la TVA entrent en vigueur. La majorité des opérations sont imposables dans l’État membre de consommation.
                   </p>
-                  <a href="https://www.impots.gouv.fr/portail/professionnel/jutilise-le-guichet-unique-tva-ioss-oss" target='_blank' rel="noreferrer">Plus d'information ici !</a>
+                  <p>L'OSS à été crée pour les ventes à distance de bien en UE depuis un stock situé en UE et l'IOSS pour le dropshipping.</p>
+                  <p>Nous avons crée un simulateur pour savoir si vous etes concerné, c'est <a className="modal-link" href="https://dougs-ecommerce.netlify.app/" target='_blank' rel="noreferrer">ICI</a></p>
+                  <hr />
+                  <a className="modal-link" href="https://www.impots.gouv.fr/portail/professionnel/jutilise-le-guichet-unique-tva-ioss-oss" target='_blank' rel="noreferrer">Plus d'information ici !</a>
                 </div>
                 <div className="modal-close">
                   <button
