@@ -11,7 +11,7 @@ ul, p, li, a, ol {
   font-family: 'Open Sans'!important;
   text-align: left;
 }
-h1, h2, h5, h4,h3, .select, .css-14el2xx-placeholder, .css-2613qy-menu, .css-qc6sy-singleValue, .css-b62m3t-container {
+h1, h2, h5, h4,h3, .select, .css-14el2xx-placeholder, .css-2613qy-menu, .css-qc6sy-singleValue, .css-b62m3t-container, .backHome {
   font-family: 'eina03'!important;
 }
 h5 {
@@ -226,11 +226,20 @@ img {
 .section {
   background-color: white;
 }
-#react-select-3-placeholder, .css-tj5bde-Svg{
+#react-select-3-placeholder, .css-tj5bde-Svg, .backHome{
   color: #001A25;
 }
 .hide {
   display: none;
+}
+#notFound{
+  margin: auto;
+  padding-top: 10em;
+}
+.backHome{
+  display: block;
+  padding-top: 10em;
+  text-align: center;
 }
 
 /* MEDIA QUERIES */

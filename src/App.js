@@ -9,6 +9,7 @@ import {DateContext} from './Context/DateContext'
 
 import Home from './Component/App/Home'
 import Results from './Component/Results/index';
+import NotFound from './Component/App/NotFound';
 
 function App() {
 
@@ -51,6 +52,8 @@ function App() {
                 <Routes>
                   <Route path='/' element={<Home />} />
                   <Route path='/calendrier' element={<Results />} />
+                  {/* Fallback - gestion de 404 */}
+                  <Route path='*' element={<NotFound />} />
                 </Routes>
               </DateContext.Provider>
             </TaxContext.Provider>
