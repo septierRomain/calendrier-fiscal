@@ -12,14 +12,31 @@ function ShowVAT() {
 
   const ShowVATValue = () => {
     if(VAT.isAnnual) {
-      if(date.is3103)
-        {return(<p>TVA à payer au 30 Juin.</p>)}
+      if(date.is3101)
+        {return(<p>TVA à payer au 30 Avril.</p>)}
+      else if(date.is2802)
+        {return(<p>TVA à payer au 31 Mai.</p>)}
+      else if(date.is3103)
+        {return(<p>TVA à payer au 31 Juin.</p>)}
+      else if(date.is3004)
+        {return(<p>TVA à payer au 30 Juillet.</p>)}
+      else if(date.is3105)
+        {return(<p>TVA à payer au 30 Aout.</p>)}
       else if(date.is3006)
         {return(<p>TVA à payer au 30 Septembre.</p>)}
+      else if(date.is3107)
+        {return(<p>TVA à payer au 31 Octobre.</p>)}
+      else if(date.is3108)
+        {return(<p>TVA à payer au 30 Novembre.</p>)}
       else if(date.is3009)
         {return(<p>TVA à payer au 31 Décembre.</p>)}
+      else if(date.is3110)
+        {return(<p>TVA à payer au 30 Janvier.</p>)}
+      else if(date.is3011)
+        {return(<p>TVA à payer au 28 Février.</p>)}
       else if(date.is3112)
-        {return(<p>TVA à payer au 30 Avril.</p>)}
+        {return(<p>TVA à payer au 31 Mars.</p>)}
+      else{return('')}
     } else if(VAT.isTrimester){
       if(Status.isSAS)
         {return(<p>TVA le 24 Avril, 24 Juillet, 24 Octobre et 24 Janvier.</p>)}
