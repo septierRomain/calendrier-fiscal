@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import StatusContext from '../../Context/StatusContext';
@@ -40,6 +40,13 @@ function Results() {
       setDate({})
     }, 50)
   }
+
+  useEffect(() => {
+    setVAT(JSON.parse(window.localStorage.getItem('VAT')))
+    setTAX(JSON.parse(window.localStorage.getItem('TAX')))
+    setDate(JSON.parse(window.localStorage.getItem('date')))
+    setStatus(JSON.parse(window.localStorage.getItem('Status')))
+  }, [])
 
   return (
     <div className='wrap'>

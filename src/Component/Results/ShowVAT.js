@@ -2,12 +2,15 @@ import React, {useContext} from 'react';
 
 import StatusContext from '../../Context/StatusContext';
 import VATContext from '../../Context/VATcontext';
-
 import DateContext from '../../Context/DateContext';
 
 function ShowVAT() {
 
-  const ShowVAT = () => {
+  const {date} = useContext(DateContext)
+  const {VAT} = useContext(VATContext)
+  const {Status} = useContext(StatusContext)
+
+  const ShowVATValue = () => {
     if(VAT.isAnnual) {
       if(date.is3103)
         {return(<p>TVA à payer au 30 Juin</p>)}
@@ -34,11 +37,8 @@ function ShowVAT() {
     } else if(VAT.noVAT){
       return(<p>Pas de déclaration de tva</p>)
     } 
+    else {return ('')}
   }
-
-  const {Status} = useContext(StatusContext)
-  const {VAT} = useContext(VATContext)
-  const {date} = useContext(DateContext)
 
   return(
     <div className='section'>
@@ -47,7 +47,10 @@ function ShowVAT() {
           <h5>TVA</h5>
         </div>
         <div className='section-content' >
-          <ShowVAT />
+          {VAT ?
+          <ShowVATValue />
+          : ''
+          }
         </div>
       </section>
     </div>
