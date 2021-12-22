@@ -27,19 +27,15 @@ function Questionnary() {
   }
 
   useEffect(() => {
-    console.log(VAT)
     localStorage.setItem('VAT', JSON.stringify(VAT))
   }, [VAT])
   useEffect(() => {
-    console.log(TAX)
     localStorage.setItem('TAX', JSON.stringify(TAX))
   }, [TAX])
   useEffect(() => {
-    console.log(date)
     localStorage.setItem('date', JSON.stringify(date))
   }, [date])
   useEffect(() => {
-    console.log(Status)
     localStorage.setItem('Status', JSON.stringify(Status))
   }, [Status])
 

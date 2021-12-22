@@ -7,7 +7,7 @@ function CFE() {
         <h5>CFE</h5>
       </div>
       <div className="section-content">
-        <p>La cotisation fonciere des entreprise (CFE) est à payer pour le 15 Décembre</p>
+        <p>La cotisation fonciere des entreprise (CFE) est à payer pour le 15 Décembre.</p>
       </div>
     </div>
   )

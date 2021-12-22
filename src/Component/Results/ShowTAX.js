@@ -20,7 +20,7 @@ function ShowTAX() {
             </div>
           {TAX.isIR ?
           <div className="section-content">
-            <p>Déclaration d'impot sur le revenu fin mai ou début juin selon votre région</p>
+            <p>Déclaration d'impot sur le revenu fin mai ou début juin selon votre région.</p>
           </div>
           : <IS />
           }
