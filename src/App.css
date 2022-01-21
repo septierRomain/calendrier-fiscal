@@ -241,6 +241,9 @@ img {
   padding-top: 10em;
   text-align: center;
 }
+.css-1s2u09g-control, .outlined, .undo{
+  cursor: pointer;
+}
 
 /* MEDIA QUERIES */
 
