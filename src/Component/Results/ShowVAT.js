@@ -17,11 +17,11 @@ function ShowVAT() {
       else if(date.is2802)
         {return(<p>TVA à payer au 31 Mai.</p>)}
       else if(date.is3103)
-        {return(<p>TVA à payer au 31 Juin.</p>)}
+        {return(<p>TVA à payer au 30 Juin.</p>)}
       else if(date.is3004)
-        {return(<p>TVA à payer au 30 Juillet.</p>)}
+        {return(<p>TVA à payer au 31 Juillet.</p>)}
       else if(date.is3105)
-        {return(<p>TVA à payer au 30 Aout.</p>)}
+        {return(<p>TVA à payer au 31 Aout.</p>)}
       else if(date.is3006)
         {return(<p>TVA à payer au 30 Septembre.</p>)}
       else if(date.is3107)
@@ -31,7 +31,7 @@ function ShowVAT() {
       else if(date.is3009)
         {return(<p>TVA à payer au 31 Décembre.</p>)}
       else if(date.is3110)
-        {return(<p>TVA à payer au 30 Janvier.</p>)}
+        {return(<p>TVA à payer au 31 Janvier.</p>)}
       else if(date.is3011)
         {return(<p>TVA à payer au 28 Février.</p>)}
       else if(date.is3112)
